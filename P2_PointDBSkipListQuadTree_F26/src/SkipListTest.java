@@ -6,7 +6,7 @@ import student.TestableRandom;
 /**
  * Tests the SkipList class.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

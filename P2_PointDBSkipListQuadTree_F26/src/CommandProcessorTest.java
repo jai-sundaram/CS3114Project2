@@ -5,7 +5,7 @@ import student.TestableRandom;
  * Tests the CommandProcessor and Database classes by feeding in command
  * lines and checking the output.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

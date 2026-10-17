@@ -3,7 +3,7 @@ import student.TestCase;
 /**
  * Tests the PointsProject main method.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

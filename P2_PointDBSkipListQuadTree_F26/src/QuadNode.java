@@ -8,7 +8,7 @@ import java.util.List;
  * in for every empty leaf. Operations that can change the shape of the
  * tree return the node that should take this node's place in its parent.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

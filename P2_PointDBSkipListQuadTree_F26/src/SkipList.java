@@ -13,7 +13,7 @@ import student.TestableRandom;
  * existing nodes that share that key, so among equal keys the most
  * recently inserted one appears first.
  *
- * @author Jai Sundaram 
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  * @param <K>

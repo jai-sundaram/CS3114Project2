@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * shared Point objects, so inserts and removes update both of them to keep
  * them in sync.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

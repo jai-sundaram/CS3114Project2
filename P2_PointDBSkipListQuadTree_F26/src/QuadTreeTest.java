@@ -5,7 +5,7 @@ import student.TestCase;
 /**
  * Tests the QuadTree and its node classes.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

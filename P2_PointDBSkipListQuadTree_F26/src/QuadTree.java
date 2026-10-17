@@ -6,7 +6,7 @@
  * pointer to the root; the position and size of each node are worked out
  * as the recursive calls descend.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

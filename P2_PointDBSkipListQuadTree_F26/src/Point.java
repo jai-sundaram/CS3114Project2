@@ -6,7 +6,7 @@
  * from either structure even when other points share its name or
  * location.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */

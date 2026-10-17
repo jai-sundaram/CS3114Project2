@@ -6,7 +6,7 @@ import java.util.List;
  * its four children, in the order NW, NE, SW, SE. Each child covers one
  * equal-sized quadrant of this node's square.
  *
- * @author Jai Sundaram
+ * @author Jai Sundaram, Yaswanth Uppalapati
  *
  * @version 2026-10-11
  */
