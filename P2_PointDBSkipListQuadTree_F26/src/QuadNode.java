@@ -67,6 +67,30 @@ public interface QuadNode {
 
 
     /**
+     * Reports the points in a query rectangle and counts the nodes visited.
+     * The query rectangle uses half-open bounds: its right and bottom edges
+     * are not part of the region.
+     *
+     * @param queryX the query rectangle's left edge
+     * @param queryY the query rectangle's top edge
+     * @param queryW the query rectangle's width
+     * @param queryH the query rectangle's height
+     * @param x this node's left edge
+     * @param y this node's top edge
+     * @param size this node's side length
+     * @return the number of quadtree nodes visited
+     */
+    int regionSearch(int queryX, int queryY, int queryW, int queryH,
+        int x, int y, int size);
+
+
+    /**
+     * Reports each duplicate coordinate in this subtree exactly once.
+     */
+    void duplicates();
+
+
+    /**
      * Adds every point stored in the subtree rooted at this node to the
      * given list, in preorder.
      *

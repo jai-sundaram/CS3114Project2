@@ -110,7 +110,8 @@ public class Database {
             return;
         }
         System.out.println("Points intersecting region " + rect + ":");
-        // TODO Milestone 3: recursive QuadTree region search
+        int visited = tree.regionSearch(x, y, w, h);
+        System.out.println(visited + " quadtree nodes visited");
     }
 
 
@@ -119,7 +120,7 @@ public class Database {
      */
     public void duplicates() {
         System.out.println("Duplicate points:");
-        // TODO Milestone 3: recursive QuadTree duplicates search
+        tree.duplicates();
     }
 
 

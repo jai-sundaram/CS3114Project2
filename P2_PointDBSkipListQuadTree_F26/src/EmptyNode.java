@@ -92,6 +92,27 @@ public class EmptyNode implements QuadNode {
 
 
     /**
+     * Visiting an empty node finds no points but still counts the node.
+     *
+     * @return one visited node
+     */
+    @Override
+    public int regionSearch(int queryX, int queryY, int queryW, int queryH,
+        int x, int y, int size) {
+        return 1;
+    }
+
+
+    /**
+     * An empty node has no duplicate coordinates.
+     */
+    @Override
+    public void duplicates() {
+        // no points here
+    }
+
+
+    /**
      * An empty node has no points to add.
      *
      * @param list

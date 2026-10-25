@@ -152,6 +152,54 @@ public class LeafNode implements QuadNode {
 
 
     /**
+     * Prints every point in this leaf that is inside the query rectangle.
+     *
+     * @return one visited node
+     */
+    @Override
+    public int regionSearch(int queryX, int queryY, int queryW, int queryH,
+        int x, int y, int size) {
+        long right = (long)queryX + queryW;
+        long bottom = (long)queryY + queryH;
+        for (Point p : points) {
+            if (p.getX() >= queryX && p.getX() < right
+                && p.getY() >= queryY && p.getY() < bottom) {
+                System.out.println("Point found: " + p.fullString());
+            }
+        }
+        return 1;
+    }
+
+
+    /**
+     * Prints each coordinate represented more than once in this leaf.
+     */
+    @Override
+    public void duplicates() {
+        for (int i = 0; i < points.size(); i++) {
+            Point candidate = points.get(i);
+            boolean appearedEarlier = false;
+            for (int j = 0; j < i; j++) {
+                if (candidate.sameLocation(points.get(j))) {
+                    appearedEarlier = true;
+                    break;
+                }
+            }
+
+            if (!appearedEarlier) {
+                for (int j = i + 1; j < points.size(); j++) {
+                    if (candidate.sameLocation(points.get(j))) {
+                        System.out.println("(" + candidate.getX() + ", "
+                            + candidate.getY() + ")");
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /**
      * Adds this leaf's points to the list.
      *
      * @param list

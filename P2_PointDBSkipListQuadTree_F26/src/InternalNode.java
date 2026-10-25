@@ -204,6 +204,55 @@ public class InternalNode implements QuadNode {
 
 
     /**
+     * Recursively searches only child squares that intersect the query.
+     *
+     * @return the number of nodes visited, including this node
+     */
+    @Override
+    public int regionSearch(int queryX, int queryY, int queryW, int queryH,
+        int x, int y, int size) {
+        int count = 1;
+        int childSize = size / 2;
+        for (int quad = NW; quad <= SE; quad++) {
+            int cx = childX(quad, x, size);
+            int cy = childY(quad, y, size);
+            if (intersects(queryX, queryY, queryW, queryH, cx, cy,
+                childSize)) {
+                count += children[quad].regionSearch(queryX, queryY, queryW,
+                    queryH, cx, cy, childSize);
+            }
+        }
+        return count;
+    }
+
+
+    /**
+     * Tests two half-open rectangles for overlap. Long arithmetic prevents
+     * overflow when a valid query rectangle extends far outside the world.
+     */
+    private boolean intersects(int queryX, int queryY, int queryW,
+        int queryH, int nodeX, int nodeY, int nodeSize) {
+        long queryRight = (long)queryX + queryW;
+        long queryBottom = (long)queryY + queryH;
+        long nodeRight = (long)nodeX + nodeSize;
+        long nodeBottom = (long)nodeY + nodeSize;
+        return queryX < nodeRight && queryRight > nodeX
+            && queryY < nodeBottom && queryBottom > nodeY;
+    }
+
+
+    /**
+     * Reports duplicates in quadrant order.
+     */
+    @Override
+    public void duplicates() {
+        for (QuadNode child : children) {
+            child.duplicates();
+        }
+    }
+
+
+    /**
      * Adds the points of all four children to the list, NW to SE.
      *
      * @param list

@@ -91,6 +91,33 @@ public class QuadTree {
 
 
     /**
+     * Reports points in a query rectangle and returns the node visit count.
+     *
+     * @param x
+     *            the x-coordinate of the rectangle's upper-left corner
+     * @param y
+     *            the y-coordinate of the rectangle's upper-left corner
+     * @param width
+     *            the positive width of the query rectangle
+     * @param height
+     *            the positive height of the query rectangle
+     * @return the number of quadtree nodes visited during the search
+     */
+    public int regionSearch(int x, int y, int width, int height) {
+        return root.regionSearch(x, y, width, height, 0, 0,
+            Point.WORLD_SIZE);
+    }
+
+
+    /**
+     * Reports all coordinates occupied by more than one point.
+     */
+    public void duplicates() {
+        root.duplicates();
+    }
+
+
+    /**
      * Prints every node of the tree in preorder, followed by the number of
      * nodes printed.
      */
