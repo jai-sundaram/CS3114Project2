@@ -9,8 +9,7 @@ import java.util.Scanner;
 // either my original work, or was derived by me from the
 // source code published in the textbook for this course.
 // - I have not discussed coding details about this project with
-// anyone other than my partner (in the case of a joint
-// submission), instructor, ACM/UPE tutors or the TAs assigned
+// anyone other than the instructor, ACM/UPE tutors or the TAs assigned
 // to this course. I understand that I may discuss the concepts
 // of this program with other students, and that another student
 // may help me debug my program so long as neither of us writes
